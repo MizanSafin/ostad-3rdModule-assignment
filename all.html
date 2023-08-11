@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3rdModule</title>
+  </head>
+  <body>
+    <script>
+      //1.Assignment-1
+      function PrintObjectProperties(obj) {
+        if (Object.keys(obj).length > 0) {
+          for (let key in obj) {
+            document.write(
+              `<h2 style="color:#6e6e6e;background:#f9fe00">${key} : ${obj[key]} <br/> </h2>`
+            );
+          }
+        } else {
+          document.write(
+            `<h2 style="color:#6e6e6e;background:#f9fe00">Object is empty</h2>`
+          );
+        }
+      }
+      PrintObjectProperties({ Name: "Mizan", Age: 29, Sex: "Male" });
+      //2.Assignment2:
+      function findMaxNumber(numsArr) {
+        if (numsArr.length > 0) {
+          return Math.max(...numsArr);
+        } else {
+          return null;
+        }
+      }
+
+      const numbers = [];
+      let result1 = findMaxNumber(numbers);
+      console.log(result1);
+      //   3.Assignment-3 :
+      function mergeArrays(arr1, arr2) {
+        return [...arr1, ...arr2];
+      }
+      let array1 = [1, 2, 3];
+      let array2 = [4, 5, 6];
+      let result2 = mergeArrays(array1, array2);
+      console.log(result2);
+      // 4.Assignment4 :
+      let calculateSquare = (number) => {
+        return number * number;
+      };
+      let result3 = calculateSquare(10);
+      console.log(result3);
+      // 5.Assignment-5 :
+      function doubleNumbers(numsArr) {
+        return numsArr.map((num) => num + num);
+      }
+      let numbersArr = [1, 2, 3, 4, 5];
+      let result4 = doubleNumbers(numbersArr);
+      console.log(result4);
+      // 6.Assignment-6 :
+      class MathUtility {
+        static multiply(num1, num2) {
+          return num1 * num2;
+        }
+      }
+      console.log(MathUtility.multiply(3, 5));
+      // 7.Assignment-7 :
+      class Animal {
+        constructor(name, sound) {
+          this.name = name;
+          this.sound = sound;
+        }
+        makeSound() {
+          console.log(this.sound);
+        }
+      }
+
+      class Dog extends Animal {
+        fetch() {
+          console.log("Fetching the ball!");
+        }
+      }
+      const animal = new Animal("Lion", "Roar");
+      animal.makeSound();
+      const dog = new Dog("Buddy", "Woof");
+      dog.makeSound();
+      dog.fetch();
+      // 8.Assignment-8:
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        introduce() {
+          console.log(
+            `Hello, my name is ${this.name} and I am ${this.age} years old.`
+          );
+        }
+      }
+      class Student extends Person {
+        constructor(name, age, major) {
+          super(...arguments);
+          this.major = major;
+        }
+        introduce() {
+          console.log(
+            `Hello, my name is ${this.name} and I am ${this.age} years old. I am majoring in ${this.major}.`
+          );
+        }
+      }
+      let person1 = new Person("John", 30);
+      let student1 = new Student("Alice", 20, "Computer science");
+      person1.introduce();
+      student1.introduce();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3rdModule</title>
+  </head>
+  <body>
+    <script>
+      //Assignment1:
+      function PrintObjectProperties(obj) {
+        if (Object.keys(obj).length > 0) {
+          for (let key in obj) {
+            document.write(
+              `<h2 style="color:#6e6e6e;background:#f9fe00">${key} : ${obj[key]} <br/> </h2>`
+            );
+          }
+        } else {
+          document.write(
+            `<h2 style="color:#6e6e6e;background:#f9fe00">Object is empty</h2>`
+          );
+        }
+      }
+      PrintObjectProperties({ Name: "Mizan", Age: 29, Sex: "Male" });
+
+      //Assignment2 :
+    </script>
+  </body>
+</html>

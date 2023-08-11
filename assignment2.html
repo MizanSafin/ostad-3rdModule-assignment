@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3rdModule</title>
+  </head>
+  <body>
+    <script>
+      function findMaxNumber(numsArr) {
+        if (numsArr.length > 0) {
+          return Math.max(...numsArr);
+        } else {
+          return null;
+        }
+      }
+
+      const numbers = [];
+      let result = findMaxNumber(numbers);
+      console.log(result);
+    </script>
+  </body>
+</html>
